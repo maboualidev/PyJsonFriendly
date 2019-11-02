@@ -169,3 +169,43 @@ This would also work as follows:
 >>> json.dumps(o)
 '[9, 10]'
 ```
+
+## Bonuses 
+### JSON Friendly Numpy NDArray
+Calling ``json.dumps`` on a ``numpy.ndarray`` would result into failure. 
+
+```commandline
+>>> np_arr = np.asarray([1, 2, 3, 4])
+>>> json.dumps(np_arr)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "E:\ProgramData\Anaconda3\envs\PyJsonFriendly\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\ProgramData\Anaconda3\envs\PyJsonFriendly\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\ProgramData\Anaconda3\envs\PyJsonFriendly\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\ProgramData\Anaconda3\envs\PyJsonFriendly\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+```
+
+If for whatever reason, you are interested to turn your ``numpy.ndarray`` into a json friendly,
+all you need to do is import ``PyJsonFriendly.JsonFriendlyNumpyNDArray``, as follow:
+
+```commandline
+import PyJsonFriendly.JsonFriendlyNumpyNDArray
+>>> json.dumps(np_arr)
+'{"type": "np.ndarray", "dtype": "int32", "shape": [4], "size": 4, "data": [1, 2, 3, 4]}'
+
+
+>>> np_arr = np_arr.reshape((2,2))
+>>> json.dumps(np_arr)
+'{"type": "np.ndarray", "dtype": "int32", "shape": [2, 2], "size": 4, "data": [[1, 2], [3, 4]]}'
+```
+
+
+
+  
+
+
