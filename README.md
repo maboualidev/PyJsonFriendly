@@ -4,6 +4,16 @@
 
 PyJsonFriendly facilitates conversion of custom made classes to JSON String using json.dumps
 
+## How to install
+just type:
+
+```bash
+pip install PyJsonFriendly
+```
+## How to cite:
+Please cite PyJsonFriendly  using the following citation:
+
+*Abouali, Mohammad. (2019, November 2). PyJsonFriendly (Version 19.11.0). Zenodo. http://doi.org/10.5281/zenodo.3525700*
 
 ## Examples
 ### Example 1: Failing Example
