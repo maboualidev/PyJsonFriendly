@@ -11,7 +11,7 @@ just type:
 pip install PyJsonFriendly
 ```
 ## How to cite:
-Please cite PyJsonFriendly  using the following citation:
+Please cite ``PyJsonFriendly``  using the following citation:
 
 *Abouali, Mohammad. (2019, November 2). PyJsonFriendly (Version 19.11.0). Zenodo. http://doi.org/10.5281/zenodo.3525700*
 
