@@ -1,6 +1,8 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3525700.svg)](https://doi.org/10.5281/zenodo.3525700)
+
 # PyJsonFriendly
 
-PyJsonFriend facilitates conversion of custom made classes to JSON String using json.dumps
+PyJsonFriendly facilitates conversion of custom made classes to JSON String using json.dumps
 
 
 ## Examples
